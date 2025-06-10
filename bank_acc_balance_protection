@@ -1,0 +1,25 @@
+class bankaccount:
+    def __init__(self,owner,balance):
+        self.__owner = owner
+        self.__balance = balance
+        
+    def get_owner(self):
+        return self.__owner
+    
+    def set_owner(self,name):
+        self.__name = name
+        
+    def get_balance(self):
+        return self.__balance
+    
+    def set_balance(self,new_balance):
+        if new_balance >= 0:
+            self.__balance = new_balance
+        else:
+            print("Invalid balance")
+            
+ac = bankaccount("Madhu", 1000)
+print(ac.get_owner())
+#print(ac.get_balance())
+ac.set_balance(1500)
+print(ac.get_balance())
